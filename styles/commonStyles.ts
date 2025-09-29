@@ -1,14 +1,17 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  primary: '#2E7D32',    // Green for environmental theme
+  secondary: '#1976D2',  // Blue for clean air
+  accent: '#4CAF50',     // Light Green
+  background: '#FFFFFF', // Light background
+  backgroundAlt: '#F5F5F5', // Light grey background
+  text: '#212121',       // Dark text for readability
+  grey: '#757575',       // Medium grey
+  card: '#FFFFFF',       // White card background
+  danger: '#F44336',     // Red for high pollution
+  warning: '#FF9800',    // Orange for moderate pollution
+  success: '#4CAF50',    // Green for good air quality
 };
 
 export const buttonStyles = StyleSheet.create({
@@ -21,6 +24,22 @@ export const buttonStyles = StyleSheet.create({
     backgroundColor: colors.backgroundAlt,
     alignSelf: 'center',
     width: '100%',
+  },
+  primaryButton: {
+    backgroundColor: colors.primary,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  secondaryButton: {
+    backgroundColor: colors.backgroundAlt,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.grey,
   },
 });
 
@@ -71,15 +90,15 @@ export const commonStyles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: colors.backgroundAlt,
+    backgroundColor: colors.card,
     borderColor: colors.grey,
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
+    borderWidth: 0.5,
+    borderRadius: 12,
+    padding: 16,
     marginVertical: 8,
     width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
-    elevation: 2,
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+    elevation: 3,
   },
   icon: {
     width: 60,
